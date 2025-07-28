@@ -24,11 +24,11 @@ X mushrooms.
 
 Print:
 
-NORMAL
+
 NORMAL, if his final size is normal.
-HUGE
+
 HUGE, if his final size is huge.
-SMALL
+
 SMALL, if his final size is small.
 You may print each character of the answer in either uppercase or lowercase (for example, the strings 
 Huge
@@ -67,35 +67,7 @@ NORMAL
 
 
 
-Here's the C++ code that solves the problem as described:
 
-```cpp
-#include <iostream>
-using namespace std;
-
-int main() {
-    int T;
-    cin >> T;
-
-    while (T--) {
-        int X;
-        cin >> X;
-
-        // Mario's transformation cycle: NORMAL -> HUGE -> SMALL -> NORMAL ...
-        int state = X % 3;
-
-        if (state == 0) {
-            cout << "NORMAL" << endl;
-        } else if (state == 1) {
-            cout << "HUGE" << endl;
-        } else if (state == 2) {
-            cout << "SMALL" << endl;
-        }
-    }
-
-    return 0;
-}
-```
 
 ### Explanation:
 
