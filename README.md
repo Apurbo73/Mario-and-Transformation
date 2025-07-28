@@ -63,3 +63,64 @@ Output
 SMALL
 HUGE
 NORMAL
+
+
+
+
+Here's the C++ code that solves the problem as described:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        int X;
+        cin >> X;
+
+        // Mario's transformation cycle: NORMAL -> HUGE -> SMALL -> NORMAL ...
+        int state = X % 3;
+
+        if (state == 0) {
+            cout << "NORMAL" << endl;
+        } else if (state == 1) {
+            cout << "HUGE" << endl;
+        } else if (state == 2) {
+            cout << "SMALL" << endl;
+        }
+    }
+
+    return 0;
+}
+```
+
+### Explanation:
+
+* Mario starts at `NORMAL`.
+* The transformations follow a cycle of 3 states: `NORMAL → HUGE → SMALL → NORMAL`.
+* So after `X` mushrooms, the state can be found using `X % 3`:
+
+  * `0` → NORMAL
+  * `1` → HUGE
+  * `2` → SMALL
+
+### Sample Input:
+
+```
+3
+2
+4
+12
+```
+
+### Sample Output:
+
+```
+SMALL
+HUGE
+NORMAL
+```
+
